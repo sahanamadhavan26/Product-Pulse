@@ -1,79 +1,71 @@
-# Product Pulse — Findings & Product Recommendations
+# Product Pulse — Evidence-Based Findings
 
-**Live dashboard:** https://public.tableau.com/app/profile/sahana.madhavan/viz/ProductPulse/ProductPulse
+[Explore the interactive dashboard](https://public.tableau.com/app/profile/sahana.madhavan/viz/ProductPulse/ProductPulse)
 
-## Evidence status
+**Dataset:** Synthetic case-study data, January–August 2026. The figures below are transcribed from the two user-provided Tableau dashboard screenshots. They are descriptive, not causal results.
 
-This file separates **questions and hypotheses** from **verified results**. The repository does not yet include a validated export of the dashboard's numerical values, so no performance figures, rankings, or causal claims are asserted below.
+## Executive metrics
 
-## Analysis areas to validate
+| Metric | Value |
+| --- | ---: |
+| Total users | 6,000 |
+| Activation rate | 53.6% |
+| Week 4 retention | 19.4% |
+| Paid conversion rate | 9.0% |
 
-### 1. Acquisition and activation
+## Finding 1 — Mobile activation is lower across all channels
 
-**Question:** Which acquisition channels bring users who successfully activate?
+Overall 7-day activation: **62.9% desktop vs 47.0% mobile**, a **15.9 percentage-point gap**.
 
-**What to check:** Activation rate by channel, segment size, and whether the definition of activation is consistent.
+| Acquisition channel | Desktop | Mobile | Gap (percentage points) |
+| --- | ---: | ---: | ---: |
+| Organic Search | 60.8% | 44.0% | 16.8 |
+| Paid Search | 59.4% | 43.4% | 16.0 |
+| Referral | 68.0% | 54.4% | 13.6 |
+| Social | 63.4% | 46.6% | 16.8 |
 
-**Possible product action:** Investigate low-performing channels with marketing and onboarding teams. Avoid reallocating spend based only on raw activation counts.
+**Interpretation:** Mobile activation is lower in each displayed acquisition channel. The comparison does not establish that the mobile interface causes the difference.
 
-**Verified finding:** Pending dashboard metric review.
+**Proposed experiment:** Test a shorter mobile onboarding flow. Measure **7-day activation** as the primary outcome, with **Week 4 retention** and **30-day paid conversion** as guardrails. **This experiment has not been run.**
 
-### 2. Cohort retention
+## Finding 2 — Template use is associated with higher retention
 
-**Question:** How consistently do users return after their initial period?
+| User segment | Week 4 retention | Displayed sample size |
+| --- | ---: | ---: |
+| Used templates | 34.1% | 1,924 |
+| Did not use templates | 12.4% | 4,076 |
 
-**What to check:** Cohort sizes, the retention time window, and any recurring decline or improvement.
+**Observed difference:** **21.7 percentage points**. The displayed retention rate is about 2.75 times as high for template users.
 
-**Possible product action:** Examine onboarding and repeat-value experiences for cohorts showing weaker retention.
+**Interpretation:** This is an association in synthetic data. Users who choose templates may differ in intent, activity, or other characteristics; the chart cannot establish that templates caused higher retention.
 
-**Verified finding:** Pending dashboard metric review.
+**Proposed investigation:** Compare users with similar characteristics, verify when template use occurs relative to retention measurement, and consider a controlled experiment if appropriate.
 
-### 3. Engagement and MAU
+## Finding 3 — Referral has the highest overall channel activation
 
-**Question:** How is active usage changing over time?
+| Channel | 7-day activation |
+| --- | ---: |
+| Organic Search | 50.7% |
+| Paid Search | 50.1% |
+| Referral | 60.1% |
+| Social | 53.5% |
 
-**What to check:** MAU trends, top-page usage, and whether shifts reflect changes in acquisition mix.
+Referral exceeds Paid Search by **10.0 percentage points**. Before adjusting acquisition spend, evaluate channel sample sizes, cost, downstream retention, and conversion.
 
-**Possible product action:** Prioritize deeper event-level analysis for areas with changing engagement.
+## Finding 4 — Retention varies by signup cohort
 
-**Verified finding:** Pending dashboard metric review.
+The overview cohort heatmap shows **April** with the highest displayed Week 4 retention (**22.2%**) and **February** with the lowest (**17.3%**), a **4.9 percentage-point difference**. Cohort composition and sample sizes should be checked before interpreting why.
 
-### 4. Conversion funnel
+## Prioritized product follow-ups
 
-**Question:** At which step are users most likely to drop out?
+1. **Mobile onboarding:** Validate the persistent device activation gap and test a shorter flow.
+2. **Template experience:** Investigate the association between template usage and retention without assuming causality.
+3. **Acquisition quality:** Evaluate Referral against other channels on downstream outcomes and cost.
+4. **Cohort retention:** Explore the differences in signup-cohort behavior.
 
-**What to check:** Step definitions, eligible populations, and conversion rates between consecutive stages.
+## Evidence and limitations
 
-**Possible product action:** Review friction at the largest verified drop-off point and develop a testable improvement hypothesis.
-
-**Verified finding:** Pending dashboard metric review.
-
-### 5. Device segmentation
-
-**Question:** Do users behave differently across devices?
-
-**What to check:** Sample sizes, event tracking consistency, and funnel or engagement patterns by device.
-
-**Possible product action:** Investigate device-specific UX friction if the difference persists after validation.
-
-**Verified finding:** Pending dashboard metric review.
-
-## Turning findings into decisions
-
-For each verified finding, record:
-
-1. **Metric and segment:** What was measured?
-2. **Observed result:** Exact value, denominator, and comparison period.
-3. **Interpretation:** What might explain it, and what remains uncertain?
-4. **Recommendation:** What should the team investigate or change?
-5. **Success measure:** Which KPI would show improvement?
-
-## Evidence checklist
-
-- [ ] Verify exact metrics against the published Tableau dashboard
-- [ ] Record dataset provenance and metric definitions
-- [ ] Add screenshots showing the referenced results
-- [ ] Document 3–5 supported insights with numerical evidence
-- [ ] Connect each insight to a practical product recommendation
-
-**Note:** Suggested actions above are illustrative hypotheses, not claims that a particular problem has been measured or solved.
+- Sources: screenshots of the **Activation & Retention** and **Product Deep Dive** dashboards.
+- Synthetic data only; no real customer outcomes are claimed.
+- Dashboard values have not been independently recomputed from the underlying dataset.
+- No experiment was run and no improvement is claimed.
