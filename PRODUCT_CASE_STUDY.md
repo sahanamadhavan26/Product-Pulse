@@ -1,70 +1,70 @@
 # Product Pulse — Product Analytics Case Study
 
-## Project summary
+## Project overview
 
-**Product Pulse** is an interactive product analytics dashboard built in Tableau Public. It brings together acquisition, activation, engagement, retention, and conversion views to support product-performance reviews.
+Product Pulse is an interactive **Tableau Public** product analytics case study built using **synthetic data (January–August 2026)**.
 
-**Live dashboard:** https://public.tableau.com/app/profile/sahana.madhavan/viz/ProductPulse/ProductPulse
+**[Open the interactive dashboard](https://public.tableau.com/app/profile/sahana.madhavan/viz/ProductPulse/ProductPulse)**
 
-## Problem statement
+## Problem and objective
 
-Product teams need to understand not only how many users arrive, but also whether they activate, return, engage with important areas of the product, and progress through a conversion funnel. When these metrics are reviewed separately, it can be difficult to identify where further investigation is most valuable.
+Product teams need to understand how users activate and return, and whether behavior differs across acquisition channels, devices, and product features. This dashboard brings together key metrics and segment-level comparisons to generate hypotheses for product improvements.
 
-## Objective
+## Dashboard design
 
-Build an exploratory dashboard that enables product stakeholders to:
+### Overview: Activation & Retention
 
-1. Compare activation across acquisition channels.
-2. Observe engagement trends such as monthly active users (MAU).
-3. Examine retention by cohort.
-4. Explore funnel progression and potential drop-off points.
-5. Segment patterns by device and time period.
+- **6,000 total users**
+- **53.6% activation rate**
+- **19.4% Week 4 retention**
+- **9.0% paid conversion rate**
+- Signup-cohort retention heatmap across weeks 1–4
+- Activation by device and acquisition channel
+- Interactive channel and device filtering
 
-## Approach
+### Deep Dive
 
-### 1. Define product questions
+- Desktop vs mobile 7-day activation across **Organic Search, Paid Search, Referral, and Social**
+- Week 4 retention comparison for users who **used templates** versus those who **did not**
 
-Start with the user journey: acquisition → activation → engagement → retention → conversion. Each dashboard section addresses a product question rather than displaying metrics without context.
+## Insights
 
-### 2. Organize analysis in Tableau
+1. **Mobile activation gap:** Desktop 7-day activation is **62.9%**, versus **47.0%** on mobile, a **15.9-point gap**. The Deep Dive shows lower mobile activation in every displayed channel, with gaps of **13.6–16.8 percentage points**.
+2. **Template usage and retention:** Week 4 retention is **34.1%** among template users (n=1,924), versus **12.4%** among non-users (n=4,076). This is an **observed association**, not a causal effect.
+3. **Acquisition channel:** Referral has the highest displayed overall 7-day activation rate at **60.1%**.
+4. **Cohort differences:** April has the highest displayed Week 4 retention at **22.2%**, while February has the lowest at **17.3%**.
 
-The project includes dashboard views for activation by channel, cohort retention, MAU, a retention heatmap, device breakdown, funnel performance, and top pages. Date filters support exploration across time periods.
+See [KEY_FINDINGS.md](KEY_FINDINGS.md) for full data tables, interpretation, and product follow-ups.
 
-### 3. Enable interactive investigation
+## Product recommendation
 
-Stakeholders can use the available dashboard filters and visual comparisons to identify segments or stages that deserve closer examination.
+**Hypothesis:** Reducing mobile onboarding friction may improve activation.
 
-### 4. Translate patterns into follow-up decisions
+**Proposed test:** Compare a shorter mobile onboarding flow against the existing experience.
 
-The dashboard is a starting point for prioritizing investigation. For example, a comparatively low activation rate in one channel would motivate reviewing traffic quality and onboarding behavior before deciding on a product change.
+**Primary metric:** 7-day activation.
 
-## Example product decision framework
+**Guardrails:** Week 4 retention and 30-day paid conversion.
 
-| Observation to investigate | Follow-up question | Potential next action |
-| --- | --- | --- |
-| Channel activation differs | Are differences driven by audience or onboarding? | Compare channel cohorts and onboarding steps |
-| A funnel stage shows drop-off | What friction occurs at that step? | Review user journeys and instrument step-level events |
-| Cohort retention varies | Is this linked to acquisition mix or product experience? | Compare matched cohorts and usage patterns |
-| Engagement changes over time | Did user mix or product behavior change? | Segment MAU and top-page trends |
-| Device performance differs | Is there a usability or measurement difference? | Audit device-specific experience and event tracking |
+**Status:** **Proposed, not executed.** No uplift or causal improvement is claimed.
 
-*These are analytical examples, not verified findings from the dashboard.*
-
-## Deliverable
-
-An interactive Tableau Public dashboard suitable for product reviews and portfolio demonstrations.
+A separate investigation could examine why template users show higher observed retention, including potential selection bias.
 
 ## Skills demonstrated
 
-- Product metric selection and framing
-- Dashboard design and Tableau visualization
-- Acquisition, activation, engagement, retention, and funnel analysis
-- Cohort and segment-based investigation
-- Product decision communication
+- Tableau dashboard creation and visual storytelling
+- KPI definition and product analytics
+- Cohort, device, and acquisition-channel segmentation
+- Translating observations into testable product hypotheses
+- Explicit communication of assumptions and limitations
 
-## Limitations and next steps
+## Limitations
 
-- Specific metric values and trends should be transcribed only after checking the published dashboard.
-- Descriptive analytics alone cannot establish causality.
-- Data definitions, dataset provenance, and calculation logic should be documented alongside a shareable workbook or data dictionary.
-- Future improvements could include a validated KPI glossary, annotated insights, and explicit product recommendations supported by measured results.
+The dataset is synthetic. Dashboard figures were transcribed from screenshots and have not been independently audited against the underlying data. Descriptive comparisons do not establish causation.
+
+## Artifacts
+
+- [Live Tableau Public dashboard](https://public.tableau.com/app/profile/sahana.madhavan/viz/ProductPulse/ProductPulse)
+- [Evidence-backed findings](KEY_FINDINGS.md)
+- Screenshots: `screenshots/dashboard-overview.png` and `screenshots/dashboard-deep-dive.png` (to be uploaded)
+- Tableau packaged workbook: not yet uploaded
