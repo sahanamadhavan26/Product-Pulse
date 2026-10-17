@@ -47,6 +47,13 @@ Product Pulse is a product analytics dashboard designed to help product managers
 
 The dashboard supports **exploratory analysis**, not causal claims. Differences between channels, cohorts, or devices should be investigated before attributing them to a product change. This repository does not yet include a verified numerical findings table; specific percentages or improvements should be added only after checking the published workbook.
 
+## Case study and findings
+
+- [Product analytics case study](PRODUCT_CASE_STUDY.md)
+- [Evidence-backed key findings](KEY_FINDINGS.md)
+
+**Dashboard snapshot:** 6,000 users · 53.6% activation · 19.4% Week 4 retention · 9.0% paid conversion. Desktop activation (62.9%) exceeds mobile (47.0%); template users show higher observed Week 4 retention (34.1% vs 12.4%). These are observations from synthetic data, not causal results.
+
 ## Repository roadmap
 
 - [x] Create a public GitHub repository
@@ -54,7 +61,7 @@ The dashboard supports **exploratory analysis**, not causal claims. Differences 
 - [x] Add the exact Tableau Public dashboard link
 - [ ] Add dashboard screenshots or an exported PDF
 - [ ] Add the Tableau workbook or data dictionary if shareable
-- [ ] Document verified insights and proposed product actions
+- [x] Document screenshot-supported insights and proposed product actions
 
 ## Portfolio context
 
