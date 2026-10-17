@@ -2,7 +2,9 @@
 
 **An interactive Tableau product analytics portfolio project** exploring acquisition, activation, engagement, retention, and conversion.
 
-> **Project status:** Dashboard built and published on Tableau Public. The exact public dashboard URL and workbook export still need to be added to this repository.
+> **Project status:** Published on Tableau Public. Workbook export and supporting screenshots can be added later.
+
+### [Open the interactive Product Pulse dashboard](https://public.tableau.com/app/profile/sahana.madhavan/viz/ProductPulse/ProductPulse)
 
 ## Overview
 
@@ -35,7 +37,7 @@ Product Pulse is a product analytics dashboard designed to help product managers
 
 ## How to explore
 
-1. Open the published Tableau dashboard (link to be added).
+1. [Open the published Tableau dashboard](https://public.tableau.com/app/profile/sahana.madhavan/viz/ProductPulse/ProductPulse).
 2. Review the overview metrics.
 3. Filter by date, channel, cohort, or device where available.
 4. Compare activation, retention, engagement, and conversion patterns.
@@ -49,7 +51,7 @@ The dashboard supports **exploratory analysis**, not causal claims. Differences 
 
 - [x] Create a public GitHub repository
 - [x] Document project purpose and dashboard scope
-- [ ] Add the exact Tableau Public dashboard link
+- [x] Add the exact Tableau Public dashboard link
 - [ ] Add dashboard screenshots or an exported PDF
 - [ ] Add the Tableau workbook or data dictionary if shareable
 - [ ] Document verified insights and proposed product actions
